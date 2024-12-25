@@ -1,0 +1,44 @@
+{
+    "appointments": [
+        {
+            "userId": "12",
+            "vetId": "",
+            "vetName": "Yurii Staryk",
+            "service": "Anesthesia",
+            "date": "January 16, 2025",
+            "time": "13:30"
+        },
+        {
+            "userId": "12",
+            "vetId": "",
+            "vetName": "Oleksandra Kovalenko",
+            "service": "Grooming",
+            "date": "August 26, 2025",
+            "time": "14:30"
+        },
+        {
+            "userId": "12",
+            "vetId": "",
+            "vetName": "Olha Tyshchenko",
+            "service": "Veterinary Dermatology",
+            "date": "March 18, 2025",
+            "time": "19:30"
+        },
+        {
+            "userId": "12",
+            "vetId": "",
+            "vetName": "Liliia Kovalchuk",
+            "service": "Diagnostic Services",
+            "date": "February 15, 2025",
+            "time": "08:30"
+        },
+        {
+            "userId": "12",
+            "vetId": "",
+            "vetName": "Mykola Romanenko",
+            "service": "Vaccinations",
+            "date": "September 8, 2025",
+            "time": "17:30"
+        }
+    ]
+}

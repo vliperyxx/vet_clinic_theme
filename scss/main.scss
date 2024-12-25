@@ -1,0 +1,418 @@
+@use 'vars' as *;
+@use 'fonts' as *;
+@use 'mixin' as *;
+@use 'breakpoints' as *;
+@use 'keyframes' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.mobile {
+    display: none;
+}
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+}
+
+.top-bar {
+    background-color: $grey;
+    width: 100%; 
+    overflow: hidden; 
+
+    .top-bar_info {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+
+        @include adaptive-padding(7px, 10px, 25px, 15px);
+    }
+
+    .top-bar_address, .top-bar_schedule {
+        display: flex;
+        align-items: center;
+        
+        @include small {
+            margin-right: 10px;
+        }
+
+        @include large {
+            margin-right: 35px;
+        }
+
+        @include font-size(10px, 16px, 500, "Montserrat", $white);  
+    }
+
+    .top-bar_icon {
+        align-items: center;
+        @include adaptive-icon-size(25px, 15px);
+
+        @include small {
+            margin-right: 5px;
+        }
+
+        @include large {
+            margin-right: 10px;
+        }
+    }
+}
+
+.header {
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include adaptive-padding(14px, 11px, 80px, 15px);
+    background-color: $white;
+    position: relative;
+    box-shadow: 7px 7px 10px rgba(221, 232, 235, 0.25); 
+    z-index: 10; 
+
+    .menu.desktop,
+    .nav-button.desktop {
+        @include small {
+            display: none;  
+        }
+    }
+}
+
+.logo {
+    img {
+        @include adaptive-image-size(200px, 100px);
+    }
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .menu-list {
+        display: flex;
+        justify-content: space-between;
+
+        .menu-item {
+            margin-right: 30px;
+            position: relative; 
+
+            .menu-link {
+                @include font(21px, 300, "Montserrat", $black);
+                position: relative;
+                padding-bottom: 5px;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 1px;
+                    background-color: transparent;
+                    transition: background-color 0.3s ease;
+                }
+
+                &:hover {
+                    color: $blue;
+
+                    &::after {
+                        background-color: $blue;
+                    }
+                }
+            }
+        }
+    }
+
+    @include small {
+        display: none;
+    }
+}
+
+.nav-button {
+    @include font(18px, 600, "Roboto", $black);
+    background-color: $yellow; 
+    width: 120px;  
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    color: $black;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+
+    @include small {
+        display: none;
+    }
+
+    &:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+    }
+}
+
+.burger-menu { 
+    display: none;
+    cursor: pointer;
+
+    @include small {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .burger-line {
+        width: 30px;  
+        height: 3px; 
+        background-color: $blue; 
+        margin: 3px 0;
+        border-radius: 100px; 
+    }
+}
+
+.mobile-menu {
+    position: fixed; 
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 26.2%);  
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);  
+    z-index: 999;
+    border: 1px solid $blue; 
+    margin-top: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s ease, visibility 0.3s ease;
+
+    &.visible {
+        opacity: 1;
+        visibility: visible;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    
+    .nav-button {
+        display: block;
+        @include font(18px, 600, "Roboto", $black);
+        background-color: $yellow;
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 0px;
+        border-bottom: 1px solid $blue; 
+        text-align: center;
+    }
+
+    .menu-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    
+        .menu-item {
+            width: 100%; 
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+    
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0; 
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background-color: $blue;
+            }
+            
+            .menu-link {
+                @include font(18px, 400, "Montserrat", $black);
+                padding: 10px;
+                text-align: center;
+    
+                &:hover {
+                    color: $blue;
+                }
+            }
+        }
+        .menu-item:last-child::after {
+            display: none;
+        }
+    }    
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $white;
+    position: relative;
+
+    @include adaptive-padding(50px, 20px, 80px, 15px);
+
+    .hero-line {
+        position: absolute;
+        top: 340px; 
+        left: 0;
+        width: 894px;
+        height: 1px; 
+        background-color: rgba(63, 166, 188, 0.3); 
+
+        @include small {
+            top: 107px;
+            width: 100%;  
+            left: 0;  
+        }
+    }
+
+    .hero-circle {
+        position: absolute;
+        top: 10px;  
+        left: -353px;  
+        width: 650px;
+        height: 650px;
+        border: 1px solid rgba(63, 166, 188, 0.3);  
+        border-radius: 50%;  
+        background-color: transparent;  
+
+        @include small {
+            display: none;  
+        }
+    }
+    
+    .hero-content {
+        max-width: 600px;
+        z-index: 2;
+
+        h2.hero-subtitle {
+            @include font-size(14px, 28px, 800, "Montserrat", $light-blue);
+            margin-bottom: 20px;
+            @include small {
+                margin-bottom: 2px;
+            }
+        }
+
+        h1.hero-title {
+            @include font-size(45px, 96px, 800, "Montserrat", $blue); 
+            margin-bottom: 70px;
+            @include small {
+                margin-bottom: 35px;
+            }
+        }
+
+        p.hero-text {
+            @include font-size(12px, 22px, 400, "Montserrat", $black);
+            margin-bottom: 30px;
+            @include small {
+                margin-bottom: 17px;
+            }
+        }
+
+        .book-appointment-button {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            @include adaptive-button-size(320px, 85px, 185px, 50px);
+            @include adaptive-padding(30px, 20px, 15px, 15px);  
+            background-color: $blue;
+            color: $white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            @include font-size(11px, 21px, 500, "Montserrat", $white);
+
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
+            &:hover {
+                transform: scale(1.05);
+            }
+
+            .button-icon {
+                margin-right: 2px; 
+                @include adaptive-icon-size(50px, 25px);
+            }
+
+            @include small {
+                margin: 0 auto;  
+                
+                &:hover {
+                    transform: none;  
+                }
+            }
+        }
+    }
+
+    .hero-image {
+        position: relative;
+        z-index: 2;
+
+        @include adaptive-image-size(570px, 300px);
+
+        img {
+            width: 100%;  
+        }
+
+        @include small {
+            margin-top: 20px;  
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(224, 237, 239, 0), $pastel-blue);
+        z-index: 0; 
+    }
+
+    @include small {
+        flex-direction: column;  
+        align-items: center;
+        text-align: center; 
+
+        .hero-content {
+            max-width: 100%;  
+        }
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998; 
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s ease, visibility 0.3s ease;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}

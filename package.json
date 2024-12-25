@@ -1,0 +1,39 @@
+{
+  "name": "vet_clinic_theme",
+  "version": "1.0.0",
+  "description": "[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.13.3",
+    "parcel": "^2.13.3"
+  },
+  "scripts": {
+    "dev": "parcel watch scss/main.scss --dist-dir css",
+    "dev-blog": "parcel watch scss/blog.scss --dist-dir css",
+    "dev-services": "parcel watch scss/services.scss --dist-dir css",
+    "dev-special-offers": "parcel watch scss/special-offers.scss --dist-dir css",
+    "dev-prices": "parcel watch scss/prices.scss --dist-dir css",
+    "dev-contacts": "parcel watch scss/contacts.scss --dist-dir css",
+    "dev-login": "parcel watch scss/login.scss --dist-dir css",
+    "dev-register": "parcel watch scss/register.scss --dist-dir css",
+    "dev-profile": "parcel watch scss/profile.scss --dist-dir css",
+    "dev-appointment": "parcel watch scss/appointment.scss --dist-dir css",
+    "dev-select-vet": "parcel watch scss/select-vet.scss --dist-dir css",
+    "dev-vet-info": "parcel watch scss/vet-info.scss --dist-dir css",
+    "build": "parcel build scss/main.scss --dist-dir css",
+    "build-blog": "parcel build scss/blog.scss --dist-dir css",
+    "build-services": "parcel build scss/services.scss --dist-dir css",
+    "build-special-offers": "parcel build scss/special-offers.scss --dist-dir css",
+    "build-prices": "parcel build scss/prices.scss --dist-dir css",
+    "build-contacts": "parcel build scss/contacts.scss --dist-dir css",
+    "build-login": "parcel build scss/login.scss --dist-dir css",
+    "build-register": "parcel build scss/register.scss --dist-dir css",
+    "build-profile": "parcel build scss/profile.scss --dist-dir css",
+    "build-appointment": "parcel build scss/appointment.scss --dist-dir css",
+    "build-select-vet": "parcel build scss/select-vet.scss --dist-dir css",
+    "build-vet-info": "parcel build scss/vet-info.scss --dist-dir css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,601 @@
+@import "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@500;700&display=swap";
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.vet-info_section {
+  background-color: #fff;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px 0 30px 80px;
+  display: flex;
+}
+
+@media (width <= 768px) {
+  .vet-info_section {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .vet-info_section .vet-image-container {
+    order: 1;
+    justify-content: flex-end;
+    width: 100%;
+    display: flex;
+  }
+
+  .vet-info_section .vet-info_details {
+    text-align: center;
+    order: 2;
+    align-items: center;
+    padding: 0 30px;
+  }
+}
+
+.vet-info_section .vet-info_details .vet-info_header {
+  text-align: left;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+@media (width <= 768px) {
+  .vet-info_section .vet-info_details .vet-info_header {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+}
+
+.vet-info_section .vet-info_details .vet-info_header .vet-name {
+  color: #3fa6bc;
+  margin-bottom: 15px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+}
+
+@media (width <= 768px) {
+  .vet-info_section .vet-info_details .vet-info_header .vet-name {
+    font-size: 24px;
+  }
+}
+
+@media (width >= 768px) {
+  .vet-info_section .vet-info_details .vet-info_header .vet-name {
+    font-size: 48px;
+  }
+}
+
+@media (width <= 768px) {
+  .vet-info_section .vet-info_details .vet-info_header .vet-name {
+    margin-bottom: 10px;
+  }
+}
+
+.vet-info_section .vet-info_details .vet-info_header .vet-specialty {
+  color: #000;
+  background-color: #ecee6f;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  padding: 5px 15px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+}
+
+@media (width <= 768px) {
+  .vet-info_section .vet-info_details .vet-info_header .vet-specialty {
+    margin-bottom: 20px;
+    font-size: 11px;
+  }
+}
+
+@media (width >= 768px) {
+  .vet-info_section .vet-info_details .vet-info_header .vet-specialty {
+    font-size: 18px;
+  }
+}
+
+.vet-info_section .vet-info_details .vet-experience {
+  margin-bottom: 30px;
+}
+
+.vet-info_section .vet-info_details .vet-experience .experience-title {
+  color: #3fa6bc;
+  margin-bottom: 10px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+}
+
+@media (width <= 768px) {
+  .vet-info_section .vet-info_details .vet-experience .experience-title {
+    font-size: 15px;
+  }
+}
+
+@media (width >= 768px) {
+  .vet-info_section .vet-info_details .vet-experience .experience-title {
+    font-size: 24px;
+  }
+}
+
+.vet-info_section .vet-info_details .vet-experience .experience-details {
+  color: #000;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 30px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  display: flex;
+}
+
+@media (width <= 768px) {
+  .vet-info_section .vet-info_details .vet-experience .experience-details {
+    font-size: 11px;
+  }
+}
+
+@media (width >= 768px) {
+  .vet-info_section .vet-info_details .vet-experience .experience-details {
+    font-size: 18px;
+  }
+}
+
+.vet-info_section .vet-info_details .vet-experience .experience-details .experience-icon {
+  width: 12px;
+  height: 12px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.vet-info_section .vet-info_details .appointment-selection {
+  gap: 45px;
+  display: flex;
+}
+
+@media (width <= 768px) {
+  .vet-info_section .vet-info_details .appointment-selection {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.vet-info_section .vet-info_details .appointment-selection .visit-date, .vet-info_section .vet-info_details .appointment-selection .visit-time {
+  text-align: center;
+}
+
+.vet-info_section .vet-info_details .appointment-selection .visit-date .selection-title, .vet-info_section .vet-info_details .appointment-selection .visit-time .selection-title {
+  color: #3fa6bc;
+  margin-bottom: 15px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+}
+
+@media (width <= 768px) {
+  .vet-info_section .vet-info_details .appointment-selection .visit-date .selection-title, .vet-info_section .vet-info_details .appointment-selection .visit-time .selection-title {
+    font-size: 15px;
+  }
+}
+
+@media (width >= 768px) {
+  .vet-info_section .vet-info_details .appointment-selection .visit-date .selection-title, .vet-info_section .vet-info_details .appointment-selection .visit-time .selection-title {
+    font-size: 24px;
+  }
+}
+
+.vet-info_section .vet-info_details .appointment-selection .visit-date .calendar-container, .vet-info_section .vet-info_details .appointment-selection .visit-time .calendar-container {
+  border-radius: none;
+  border: 1px solid #8cc5d2;
+  width: 250px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.vet-info_section .vet-info_details .appointment-selection .visit-date .calendar-container th, .vet-info_section .vet-info_details .appointment-selection .visit-date .calendar-container td, .vet-info_section .vet-info_details .appointment-selection .visit-time .calendar-container th, .vet-info_section .vet-info_details .appointment-selection .visit-time .calendar-container td {
+  text-align: center;
+  border: 1px solid #8cc5d2;
+  padding: 15px;
+}
+
+.vet-info_section .vet-info_details .appointment-selection .visit-date .calendar-container .calendar-header, .vet-info_section .vet-info_details .appointment-selection .visit-time .calendar-container .calendar-header {
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  display: flex;
+}
+
+.vet-info_section .vet-info_details .appointment-selection .visit-date .calendar-container .calendar-header .prev-month, .vet-info_section .vet-info_details .appointment-selection .visit-date .calendar-container .calendar-header .next-month, .vet-info_section .vet-info_details .appointment-selection .visit-time .calendar-container .calendar-header .prev-month, .vet-info_section .vet-info_details .appointment-selection .visit-time .calendar-container .calendar-header .next-month {
+  cursor: pointer;
+  color: #3fa6bc;
+  background: none;
+  border: none;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+}
+
+@media (width <= 768px) {
+  .vet-info_section .vet-info_details .appointment-selection .visit-date .calendar-container .calendar-header .prev-month, .vet-info_section .vet-info_details .appointment-selection .visit-date .calendar-container .calendar-header .next-month, .vet-info_section .vet-info_details .appointment-selection .visit-time .calendar-container .calendar-header .prev-month, .vet-info_section .vet-info_details .appointment-selection .visit-time .calendar-container .calendar-header .next-month {
+    font-size: 14px;
+  }
+}
+
+@media (width >= 768px) {
+  .vet-info_section .vet-info_details .appointment-selection .visit-date .calendar-container .calendar-header .prev-month, .vet-info_section .vet-info_details .appointment-selection .visit-date .calendar-container .calendar-header .next-month, .vet-info_section .vet-info_details .appointment-selection .visit-time .calendar-container .calendar-header .prev-month, .vet-info_section .vet-info_details .appointment-selection .visit-time .calendar-container .calendar-header .next-month {
+    font-size: 18px;
+  }
+}
+
+.vet-info_section .vet-info_details .appointment-selection .visit-date .calendar-container .calendar-header .calendar-month, .vet-info_section .vet-info_details .appointment-selection .visit-time .calendar-container .calendar-header .calendar-month {
+  color: #3fa6bc;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+}
+
+@media (width <= 768px) {
+  .vet-info_section .vet-info_details .appointment-selection .visit-date .calendar-container .calendar-header .calendar-month, .vet-info_section .vet-info_details .appointment-selection .visit-time .calendar-container .calendar-header .calendar-month {
+    font-size: 13px;
+  }
+}
+
+@media (width >= 768px) {
+  .vet-info_section .vet-info_details .appointment-selection .visit-date .calendar-container .calendar-header .calendar-month, .vet-info_section .vet-info_details .appointment-selection .visit-time .calendar-container .calendar-header .calendar-month {
+    font-size: 17px;
+  }
+}
+
+.vet-info_section .vet-info_details .appointment-selection .visit-date .calendar-container .calendar, .vet-info_section .vet-info_details .appointment-selection .visit-time .calendar-container .calendar {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.vet-info_section .vet-info_details .appointment-selection .visit-date .calendar-container .calendar th, .vet-info_section .vet-info_details .appointment-selection .visit-date .calendar-container .calendar td, .vet-info_section .vet-info_details .appointment-selection .visit-time .calendar-container .calendar th, .vet-info_section .vet-info_details .appointment-selection .visit-time .calendar-container .calendar td {
+  cursor: pointer;
+  padding: 8px;
+  transition: background-color .3s;
+}
+
+.vet-info_section .vet-info_details .appointment-selection .visit-date .calendar-container .calendar th.date-slot:hover, .vet-info_section .vet-info_details .appointment-selection .visit-date .calendar-container .calendar th.selected, .vet-info_section .vet-info_details .appointment-selection .visit-date .calendar-container .calendar td.date-slot:hover, .vet-info_section .vet-info_details .appointment-selection .visit-date .calendar-container .calendar td.selected, .vet-info_section .vet-info_details .appointment-selection .visit-time .calendar-container .calendar th.date-slot:hover, .vet-info_section .vet-info_details .appointment-selection .visit-time .calendar-container .calendar th.selected, .vet-info_section .vet-info_details .appointment-selection .visit-time .calendar-container .calendar td.date-slot:hover, .vet-info_section .vet-info_details .appointment-selection .visit-time .calendar-container .calendar td.selected {
+  background-color: #c3e4eb;
+}
+
+.vet-info_section .vet-info_details .appointment-selection .visit-date .calendar-container .calendar th, .vet-info_section .vet-info_details .appointment-selection .visit-time .calendar-container .calendar th {
+  color: #000;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+}
+
+@media (width <= 768px) {
+  .vet-info_section .vet-info_details .appointment-selection .visit-date .calendar-container .calendar th, .vet-info_section .vet-info_details .appointment-selection .visit-time .calendar-container .calendar th {
+    font-size: 10px;
+  }
+}
+
+@media (width >= 768px) {
+  .vet-info_section .vet-info_details .appointment-selection .visit-date .calendar-container .calendar th, .vet-info_section .vet-info_details .appointment-selection .visit-time .calendar-container .calendar th {
+    font-size: 10px;
+  }
+}
+
+.vet-info_section .vet-info_details .appointment-selection .visit-date .calendar-container .calendar td, .vet-info_section .vet-info_details .appointment-selection .visit-time .calendar-container .calendar td {
+  text-align: center;
+  color: #000;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+}
+
+@media (width <= 768px) {
+  .vet-info_section .vet-info_details .appointment-selection .visit-date .calendar-container .calendar td, .vet-info_section .vet-info_details .appointment-selection .visit-time .calendar-container .calendar td {
+    font-size: 13px;
+  }
+}
+
+@media (width >= 768px) {
+  .vet-info_section .vet-info_details .appointment-selection .visit-date .calendar-container .calendar td, .vet-info_section .vet-info_details .appointment-selection .visit-time .calendar-container .calendar td {
+    font-size: 17px;
+  }
+}
+
+.vet-info_section .vet-info_details .appointment-selection .visit-date .calendar-container .calendar .disabled, .vet-info_section .vet-info_details .appointment-selection .visit-time .calendar-container .calendar .disabled {
+  color: #5c5a5a;
+  cursor: not-allowed;
+}
+
+.vet-info_section .vet-info_details .appointment-selection .visit-date .time-slots, .vet-info_section .vet-info_details .appointment-selection .visit-time .time-slots {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  display: grid;
+}
+
+.vet-info_section .vet-info_details .appointment-selection .visit-date .time-slots .time-slot, .vet-info_section .vet-info_details .appointment-selection .visit-time .time-slots .time-slot {
+  cursor: pointer;
+  text-align: center;
+  color: #3fa6bc;
+  background-color: #0000;
+  border: 1px solid #3fa6bc;
+  border-radius: 8px;
+  padding: 8px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  transition: all .3s;
+}
+
+@media (width <= 768px) {
+  .vet-info_section .vet-info_details .appointment-selection .visit-date .time-slots .time-slot, .vet-info_section .vet-info_details .appointment-selection .visit-time .time-slots .time-slot {
+    font-size: 15px;
+  }
+}
+
+@media (width >= 768px) {
+  .vet-info_section .vet-info_details .appointment-selection .visit-date .time-slots .time-slot, .vet-info_section .vet-info_details .appointment-selection .visit-time .time-slots .time-slot {
+    font-size: 16px;
+  }
+}
+
+.vet-info_section .vet-info_details .appointment-selection .visit-date .time-slots .time-slot:hover, .vet-info_section .vet-info_details .appointment-selection .visit-date .time-slots .time-slot.selected, .vet-info_section .vet-info_details .appointment-selection .visit-time .time-slots .time-slot:hover, .vet-info_section .vet-info_details .appointment-selection .visit-time .time-slots .time-slot.selected {
+  background-color: #c3e4eb;
+}
+
+@media (width <= 768px) {
+  .vet-info_section .vet-info_details .appointment-selection .visit-date .time-slots, .vet-info_section .vet-info_details .appointment-selection .visit-time .time-slots {
+    padding: 0 20px;
+  }
+
+  .vet-info_section .vet-info_details .appointment-selection .visit-date .time-slots .time-slot, .vet-info_section .vet-info_details .appointment-selection .visit-time .time-slots .time-slot {
+    padding: 8px;
+  }
+}
+
+.vet-info_section .vet-info_details .schedule-button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #3fa6bc;
+  border: none;
+  border-radius: 25px;
+  align-self: center;
+  margin-top: 30px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  transition: background-color .3s;
+}
+
+@media (width >= 768px) {
+  .vet-info_section .vet-info_details .schedule-button {
+    width: 250px;
+    height: 70px;
+  }
+}
+
+@media (width <= 768px) {
+  .vet-info_section .vet-info_details .schedule-button {
+    width: 155px;
+    height: 38px;
+    font-size: 15px;
+  }
+}
+
+@media (width >= 768px) {
+  .vet-info_section .vet-info_details .schedule-button {
+    font-size: 25px;
+  }
+}
+
+@media (width <= 768px) {
+  .vet-info_section .vet-info_details .schedule-button {
+    margin-top: 20px;
+  }
+}
+
+.vet-info_section .vet-info_details .schedule-button:hover {
+  background-color: #328496;
+}
+
+.vet-info_section .vet-image-container {
+  opacity: 0;
+  max-width: 100%;
+  height: auto;
+  animation: 1.2s forwards slideIn;
+  transform: translateX(100px);
+}
+
+@media (width <= 768px) {
+  .vet-info_section .vet-image-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.vet-info_section .vet-image-container .vet-photo {
+  border-radius: 0;
+  width: 670px;
+}
+
+@media (width <= 768px) {
+  .vet-info_section .vet-image-container .vet-photo {
+    width: 290px;
+  }
+}
+
+.schedule-overlay {
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  background-color: #00000080;
+  width: 100vw;
+  height: 100vh;
+  transition: opacity .6s, visibility .3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.schedule-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.confirmation-section {
+  z-index: 1000;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  background-color: #fff;
+  border: 1px solid #3fa6bc;
+  border-radius: 25px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: opacity .6s, visibility .3s;
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (width >= 768px) {
+  .confirmation-section {
+    width: 454px;
+    height: 273px;
+  }
+}
+
+@media (width <= 768px) {
+  .confirmation-section {
+    width: 250px;
+    height: 213px;
+    padding: 17px 21px;
+  }
+}
+
+@media (width >= 768px) {
+  .confirmation-section {
+    padding: 29px 38px;
+  }
+}
+
+.confirmation-section.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.confirmation-section .confirmation-container {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.confirmation-section .confirmation-icon {
+  margin-bottom: 16px;
+}
+
+@media (width >= 768px) {
+  .confirmation-section .confirmation-icon {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (width <= 768px) {
+  .confirmation-section .confirmation-icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 10px;
+  }
+}
+
+.confirmation-section .confirmation-title {
+  color: #000;
+  margin-bottom: 8px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+}
+
+@media (width <= 768px) {
+  .confirmation-section .confirmation-title {
+    font-size: 17px;
+  }
+}
+
+@media (width >= 768px) {
+  .confirmation-section .confirmation-title {
+    font-size: 20px;
+  }
+}
+
+@media (width <= 768px) {
+  .confirmation-section .confirmation-title {
+    margin-bottom: 5px;
+  }
+}
+
+.confirmation-section .confirmation-message {
+  color: #000;
+  margin-bottom: 22px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+}
+
+@media (width <= 768px) {
+  .confirmation-section .confirmation-message {
+    font-size: 13px;
+  }
+}
+
+@media (width >= 768px) {
+  .confirmation-section .confirmation-message {
+    font-size: 13px;
+  }
+}
+
+@media (width <= 768px) {
+  .confirmation-section .confirmation-message {
+    margin-bottom: 25px;
+  }
+}
+
+.confirmation-section .confirm-button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #3fa6bc;
+  border: none;
+  border-radius: 25px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  transition: transform .3s;
+}
+
+@media (width >= 768px) {
+  .confirmation-section .confirm-button {
+    width: 212px;
+    height: 55px;
+  }
+}
+
+@media (width <= 768px) {
+  .confirmation-section .confirm-button {
+    width: 113px;
+    height: 32px;
+    font-size: 15px;
+  }
+}
+
+@media (width >= 768px) {
+  .confirmation-section .confirm-button {
+    font-size: 25px;
+  }
+}
+
+.confirmation-section .confirm-button:hover {
+  transform: scale(1.05);
+}
+/*# sourceMappingURL=vet-info.css.map */

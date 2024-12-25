@@ -1,0 +1,444 @@
+@import "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@500;700&display=swap";
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.profile-section {
+  background-color: #fff;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+}
+
+@media (width <= 768px) {
+  .profile-section {
+    flex-direction: column;
+    min-height: 80vh;
+  }
+
+  .profile-section .history-dropdown {
+    order: 1;
+  }
+
+  .profile-section .order-history_details {
+    order: 2;
+  }
+
+  .profile-section {
+    padding: 22px 17px;
+  }
+}
+
+@media (width >= 768px) {
+  .profile-section {
+    padding: 35px 80px;
+  }
+}
+
+.profile-section .profile-header {
+  background-color: #5db5cd;
+  border-radius: 20px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  display: flex;
+}
+
+@media (width <= 768px) {
+  .profile-section .profile-header {
+    height: 59px;
+    padding: 15px 16px;
+  }
+}
+
+@media (width >= 768px) {
+  .profile-section .profile-header {
+    padding: 26px 35px;
+  }
+}
+
+.profile-section .profile-header .profile-title {
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+}
+
+@media (width <= 768px) {
+  .profile-section .profile-header .profile-title {
+    font-size: 24px;
+  }
+}
+
+@media (width >= 768px) {
+  .profile-section .profile-header .profile-title {
+    font-size: 42px;
+  }
+}
+
+.profile-section .profile-header .logout-icon {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  margin-left: 20px;
+}
+
+.profile-section .profile-header .logout-icon:hover {
+  opacity: .8;
+}
+
+.profile-section .visit-history {
+  width: 100%;
+  margin-top: 42px;
+  padding: 0 35px;
+}
+
+@media (width <= 768px) {
+  .profile-section .visit-history {
+    margin-top: 30px;
+    padding: 0 18px;
+  }
+}
+
+.profile-section .visit-history .visit-history_title {
+  color: #000;
+  margin-bottom: 20px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  display: block;
+}
+
+@media (width <= 768px) {
+  .profile-section .visit-history .visit-history_title {
+    font-size: 18px;
+  }
+}
+
+@media (width >= 768px) {
+  .profile-section .visit-history .visit-history_title {
+    font-size: 35px;
+  }
+}
+
+@media (width <= 768px) {
+  .profile-section .visit-history .visit-history_title {
+    margin-bottom: 18px;
+  }
+}
+
+.profile-section .visit-history .visit-history_content {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.profile-section .visit-history .visit-history_content .visit-history_filter {
+  margin-right: 38px;
+}
+
+.profile-section .visit-history .visit-history_content .visit-history_filter .order-history_button {
+  color: #fff;
+  cursor: pointer;
+  text-align: left;
+  background-color: #8cc5d2;
+  border: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  display: flex;
+  position: relative;
+}
+
+@media (width >= 768px) {
+  .profile-section .visit-history .visit-history_content .visit-history_filter .order-history_button {
+    width: 306px;
+    height: 81px;
+  }
+}
+
+@media (width <= 768px) {
+  .profile-section .visit-history .visit-history_content .visit-history_filter .order-history_button {
+    width: 288px;
+    height: 60px;
+    font-size: 16px;
+  }
+}
+
+@media (width >= 768px) {
+  .profile-section .visit-history .visit-history_content .visit-history_filter .order-history_button {
+    font-size: 20px;
+  }
+}
+
+.profile-section .visit-history .visit-history_content .visit-history_filter .order-history_button .arrow {
+  align-items: center;
+  display: flex;
+}
+
+.profile-section .visit-history .visit-history_content .visit-history_filter .order-history_button .arrow img {
+  height: auto;
+}
+
+@media (width <= 768px) {
+  .profile-section .visit-history .visit-history_content .visit-history_filter .order-history_button .arrow img {
+    max-width: 20px;
+  }
+}
+
+@media (width >= 768px) {
+  .profile-section .visit-history .visit-history_content .visit-history_filter .order-history_button .arrow img {
+    max-width: 24px;
+  }
+}
+
+@media (width <= 768px) {
+  .profile-section .visit-history .visit-history_content .visit-history_filter .order-history_button .arrow {
+    transform: rotate(90deg);
+  }
+}
+
+.profile-section .visit-history .visit-history_content .visit-history_filter .order-history_button:after {
+  content: "";
+  background-color: #0003;
+  width: 150px;
+  height: 1px;
+  margin-top: 36px;
+  position: absolute;
+  top: 50%;
+  right: -75px;
+  transform: translateY(-50%)rotate(90deg);
+}
+
+@media (width <= 768px) {
+  .profile-section .visit-history .visit-history_content .visit-history_filter .order-history_button:after {
+    display: none;
+  }
+}
+
+.profile-section .visit-history .visit-history_content .order-history_details {
+  display: none;
+}
+
+.profile-section .visit-history .visit-history_content .order-history_details .order-history_title {
+  color: #000;
+  margin-top: 47px;
+  margin-bottom: 20px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+}
+
+@media (width <= 768px) {
+  .profile-section .visit-history .visit-history_content .order-history_details .order-history_title {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+}
+
+@media (width >= 768px) {
+  .profile-section .visit-history .visit-history_content .order-history_details .order-history_title {
+    font-size: 28px;
+  }
+}
+
+@media (width <= 768px) {
+  .profile-section .visit-history .visit-history_content .order-history_details .order-history_title {
+    margin-bottom: 18px;
+  }
+}
+
+.profile-section .visit-history .visit-history_content .order-history_details .appointment-entry .service-type {
+  color: #000;
+  margin-bottom: 10px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+}
+
+@media (width <= 768px) {
+  .profile-section .visit-history .visit-history_content .order-history_details .appointment-entry .service-type {
+    font-size: 13px;
+  }
+}
+
+@media (width >= 768px) {
+  .profile-section .visit-history .visit-history_content .order-history_details .appointment-entry .service-type {
+    font-size: 17px;
+  }
+}
+
+.profile-section .visit-history .visit-history_content .order-history_details .appointment-entry .vet-name {
+  color: #3fa6bc;
+  margin-bottom: 7px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+}
+
+@media (width <= 768px) {
+  .profile-section .visit-history .visit-history_content .order-history_details .appointment-entry .vet-name {
+    font-size: 15px;
+  }
+}
+
+@media (width >= 768px) {
+  .profile-section .visit-history .visit-history_content .order-history_details .appointment-entry .vet-name {
+    font-size: 20px;
+  }
+}
+
+.profile-section .visit-history .visit-history_content .order-history_details .appointment-entry .appointment-info {
+  align-items: center;
+  gap: 57px;
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.profile-section .visit-history .visit-history_content .order-history_details .appointment-entry .appointment-info .status-badge {
+  color: #fff;
+  background-color: #8cc5d2;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+}
+
+@media (width <= 768px) {
+  .profile-section .visit-history .visit-history_content .order-history_details .appointment-entry .appointment-info .status-badge {
+    font-size: 11px;
+  }
+}
+
+@media (width >= 768px) {
+  .profile-section .visit-history .visit-history_content .order-history_details .appointment-entry .appointment-info .status-badge {
+    font-size: 13px;
+  }
+}
+
+.profile-section .visit-history .visit-history_content .order-history_details .appointment-entry .appointment-info .appointment-time {
+  color: #000;
+  white-space: nowrap;
+  align-items: center;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  display: flex;
+}
+
+@media (width <= 768px) {
+  .profile-section .visit-history .visit-history_content .order-history_details .appointment-entry .appointment-info .appointment-time {
+    font-size: 13px;
+  }
+}
+
+@media (width >= 768px) {
+  .profile-section .visit-history .visit-history_content .order-history_details .appointment-entry .appointment-info .appointment-time {
+    font-size: 17px;
+  }
+}
+
+.profile-section .visit-history .visit-history_content .order-history_details .appointment-entry .appointment-info .appointment-time .profile-clock_icon-dot {
+  background-color: #8cc5d2;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  margin-right: 8px;
+  display: inline-block;
+}
+
+.profile-section .visit-history .visit-history_content .history-dropdown {
+  align-self: flex-start;
+  margin-top: 42px;
+  padding: 12px 0 12px 240px;
+}
+
+@media (width <= 768px) {
+  .profile-section .visit-history .visit-history_content .history-dropdown {
+    margin-top: 20px;
+    padding: 12px 0;
+  }
+}
+
+.profile-section .visit-history .visit-history_content .history-dropdown select {
+  color: #fff;
+  cursor: pointer;
+  appearance: none;
+  background-color: #8cc5d2;
+  background-image: url("vector-arrow.7936215b.svg");
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  background-size: 12px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+}
+
+@media (width >= 768px) {
+  .profile-section .visit-history .visit-history_content .history-dropdown select {
+    width: 206px;
+    height: 42px;
+  }
+}
+
+@media (width <= 768px) {
+  .profile-section .visit-history .visit-history_content .history-dropdown select {
+    width: 288px;
+    height: 42px;
+    font-size: 12px;
+  }
+}
+
+@media (width >= 768px) {
+  .profile-section .visit-history .visit-history_content .history-dropdown select {
+    font-size: 15px;
+  }
+}
+
+.profile-section .visit-history .visit-history_content .history-dropdown select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #3fa6bc66;
+}
+
+.profile-section .visit-history .visit-history_content .history-dropdown option {
+  color: #fff;
+  background-color: #8cc5d2;
+  padding: 12px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+}
+
+@media (width >= 768px) {
+  .profile-section .visit-history .visit-history_content .history-dropdown option {
+    width: 206px;
+    height: 42px;
+  }
+}
+
+@media (width <= 768px) {
+  .profile-section .visit-history .visit-history_content .history-dropdown option {
+    width: 288px;
+    height: 42px;
+    font-size: 12px;
+  }
+}
+
+@media (width >= 768px) {
+  .profile-section .visit-history .visit-history_content .history-dropdown option {
+    font-size: 15px;
+  }
+}
+
+.profile-section .visit-history .visit-history_content .history-dropdown option:hover, .profile-section .visit-history .visit-history_content .history-dropdown option:focus {
+  background-color: #67b3c4;
+}
+/*# sourceMappingURL=profile.css.map */

@@ -1,0 +1,183 @@
+@import "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@500;700&display=swap";
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (width <= 768px) {
+  .vet-selection {
+    padding: 22px 17px;
+  }
+}
+
+@media (width >= 768px) {
+  .vet-selection {
+    padding: 40px 80px;
+  }
+}
+
+.vet-selection .vet-selection_header {
+  margin-bottom: 40px;
+}
+
+@media (width <= 768px) {
+  .vet-selection .vet-selection_header {
+    margin-bottom: 22px;
+  }
+}
+
+.vet-selection .vet-selection_header .vet-service_title {
+  color: #3fa6bc;
+  margin-bottom: 40px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+}
+
+@media (width <= 768px) {
+  .vet-selection .vet-selection_header .vet-service_title {
+    font-size: 13px;
+  }
+}
+
+@media (width >= 768px) {
+  .vet-selection .vet-selection_header .vet-service_title {
+    font-size: 25px;
+  }
+}
+
+@media (width <= 768px) {
+  .vet-selection .vet-selection_header .vet-service_title {
+    margin-bottom: 22px;
+  }
+}
+
+.vet-selection .vet-selection_header .vet-selection_title {
+  color: #3fa6bc;
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+}
+
+@media (width <= 768px) {
+  .vet-selection .vet-selection_header .vet-selection_title {
+    font-size: 24px;
+  }
+}
+
+@media (width >= 768px) {
+  .vet-selection .vet-selection_header .vet-selection_title {
+    font-size: 48px;
+  }
+}
+
+.vet-selection .vet-list {
+  justify-content: space-between;
+  display: flex;
+}
+
+@media (width <= 768px) {
+  .vet-selection .vet-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+.vet-selection .vet-list .vet-card {
+  flex-direction: column;
+  align-items: center;
+  display: none;
+}
+
+@media (width <= 768px) {
+  .vet-selection .vet-list .vet-card {
+    max-width: 100%;
+  }
+}
+
+.vet-selection .vet-list .vet-card .vet-image {
+  cursor: pointer;
+  border-radius: 50%;
+  width: 100%;
+  margin-bottom: 30px;
+  transition: transform .6s;
+}
+
+@media (width <= 768px) {
+  .vet-selection .vet-list .vet-card .vet-image {
+    max-width: 250px;
+  }
+}
+
+@media (width >= 768px) {
+  .vet-selection .vet-list .vet-card .vet-image {
+    max-width: 380px;
+  }
+}
+
+@media (width <= 768px) {
+  .vet-selection .vet-list .vet-card .vet-image {
+    margin-bottom: 15px;
+  }
+}
+
+.vet-selection .vet-list .vet-card .vet-image:hover {
+  transform: scale(1.1);
+}
+
+.vet-selection .vet-list .vet-card .vet-name, .vet-selection .vet-list .vet-card .vet-specialty {
+  cursor: pointer;
+}
+
+.vet-selection .vet-list .vet-card .vet-name {
+  color: #3fa6bc;
+  margin-bottom: 10px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+}
+
+@media (width <= 768px) {
+  .vet-selection .vet-list .vet-card .vet-name {
+    font-size: 17px;
+  }
+}
+
+@media (width >= 768px) {
+  .vet-selection .vet-list .vet-card .vet-name {
+    font-size: 25px;
+  }
+}
+
+@media (width <= 768px) {
+  .vet-selection .vet-list .vet-card .vet-name {
+    margin-bottom: 5px;
+  }
+}
+
+.vet-selection .vet-list .vet-card .vet-specialty {
+  color: #5c5a5a;
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+}
+
+@media (width <= 768px) {
+  .vet-selection .vet-list .vet-card .vet-specialty {
+    font-size: 11px;
+  }
+}
+
+@media (width >= 768px) {
+  .vet-selection .vet-list .vet-card .vet-specialty {
+    font-size: 18px;
+  }
+}
+/*# sourceMappingURL=select-vet.css.map */

@@ -1,0 +1,110 @@
+@use 'vars' as *;
+@use 'fonts' as *;
+@use 'mixin' as *;
+@use 'breakpoints' as *;
+@use 'keyframes' as *;
+
+.services-section {
+    @include adaptive-padding(45px, 22px, 80px, 30px);
+
+    .services-title {
+        @include font-size(32px, 64px, 700, "Montserrat", $blue);
+        text-align: center;
+        margin-bottom: 45px;
+
+        @include small {
+            margin-bottom: 22px;
+        }
+    }
+
+    .services-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+
+        @include small {
+            flex-direction: column;
+            gap: 15px;
+        }
+    }
+
+    .col-4 {
+        @include small {
+            max-width: 100%;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: flex-start;
+            background-color: $white;
+            border: 1px solid $light-blue;
+            border-radius: 25px;
+            padding: 25px;
+            gap: 28px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            @include large {
+                width: 400px;
+                height: 210px;
+            }
+
+            @include small {
+                padding: 15px;
+                gap: 22px;
+            }
+
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            }
+
+            .service-icon {
+                @include adaptive-icon-size(50px, 35px);
+            }
+
+            .service-content {
+                display: flex;
+                flex-direction: column;
+                margin-top: 13px;
+
+                @include small {
+                    margin-top: 7px;
+                }
+
+                .service-title {
+                    @include font-size(17px, 20px, 500, "Montserrat", $black);
+                    margin-bottom: 10px;
+
+                    @include small {
+                        margin-bottom: 7px;
+                    }
+                }
+
+                .service-description {
+                    @include font-size(13px, 16px, 300, "Montserrat", $black);
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998; 
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s ease, visibility 0.3s ease;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}

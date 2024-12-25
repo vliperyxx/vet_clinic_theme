@@ -1,0 +1,108 @@
+@use 'vars' as *;
+@use 'fonts' as *;
+@use 'mixin' as *;
+@use 'breakpoints' as *;
+@use 'keyframes' as *;
+
+.prices-section {
+    @include adaptive-padding(45px, 22px, 188px, 17px);
+
+    .prices-title {
+        @include font-size(32px, 64px, 700, "Montserrat", $blue);
+        text-align: center;
+        margin-bottom: 45px;
+
+        @include small {
+            margin-bottom: 22px;
+        }
+    }
+
+    .prices-row {
+        display: flex;
+        flex-direction: column;
+        gap: 27px;
+
+        @include small {
+            gap: 15px;
+        }
+    }
+
+    .price-item {
+        background-color: $white;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.15); 
+        }
+
+        .price-icon {
+            @include adaptive-size(85px, 123px, 70px, 50px);
+            background-color: $ice-blue; 
+            border-radius: 20px 0 0 20px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 40px;
+
+            @include small {
+                margin-right: 10px;
+            }
+
+            img {
+                width: 50px;
+                height: 50px;
+
+                @include small {
+                    width: 26px;
+                    height: 26px;
+                }
+            }
+        }
+
+        .price-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-grow: 1;
+
+            .price-name {
+                @include font-size(13px, 32px, 400, "Montserrat", $black);
+                text-align: left;
+            }
+
+            .price-amount {
+                @include font-size(13px, 32px, 400, "Montserrat", $blue);
+                text-align: right;
+                margin-right: 23px;
+
+                @include small {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998; 
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s ease, visibility 0.3s ease;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "patients": [
+        {
+            "userId": "12",
+            "name": "Ember Bennet",
+            "phone": "5512668434",
+            "visits": [
+                {
+                    "date": "2024-12-25",
+                    "service": "Anesthesia"
+                }
+            ]
+        },
+        {
+            "userId": "12",
+            "name": "Ember Bennet",
+            "phone": "5553428400",
+            "visits": [
+                {
+                    "date": "2024-12-25",
+                    "service": "Grooming"
+                }
+            ]
+        },
+        {
+            "userId": "12",
+            "name": "Ember Bennet",
+            "phone": "5512668434",
+            "visits": [
+                {
+                    "date": "2024-12-25",
+                    "service": "Veterinary Dermatology"
+                }
+            ]
+        },
+        {
+            "userId": "12",
+            "name": "Ember Bennet",
+            "phone": "5512668434",
+            "visits": [
+                {
+                    "date": "2024-12-25",
+                    "service": "Diagnostic Services"
+                }
+            ]
+        },
+        {
+            "userId": "12",
+            "name": "Ember Bennet",
+            "phone": "2013005806",
+            "visits": [
+                {
+                    "date": "2024-12-25",
+                    "service": "Vaccinations"
+                }
+            ]
+        }
+    ]
+}

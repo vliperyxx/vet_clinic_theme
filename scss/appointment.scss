@@ -1,0 +1,136 @@
+@use 'vars' as *;
+@use 'fonts' as *;
+@use 'mixin' as *;
+@use 'breakpoints' as *;
+@use 'keyframes' as *;
+
+.appointment-section {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    padding: 57px 80px;
+    @include small {
+        padding: 37px 26px 0px 26px;
+    }
+    background-color: #fff;
+
+    @include small {
+        flex-direction: column;
+    }
+
+    .appointment-form_container {
+        z-index: 1;
+        width: 606px; 
+        max-width: 100%; 
+        @include small {
+            max-width: 308px;
+        }
+        background-color: $white;
+        padding: 30px;
+        border-radius: 25px;
+        border: 1px solid $blue;
+
+        @include small {
+            max-width: 100%;
+            padding: 15px 8px;
+        }
+
+        .appointment-title {
+            @include font-size(18px, 36px, 700, "Montserrat", $blue);
+            text-align: center;
+            margin-bottom: 35px;
+            @include small {
+                margin-bottom: 22px;
+            }
+        }
+
+        .appointment-form {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            @include small {
+                gap: 10px;
+            }
+
+            .form-group {
+                display: flex;
+                flex-direction: column;
+                
+                label {
+                    @include font-size(13px, 19px, 400, "Montserrat", $grey);
+                    margin-bottom: 4px;
+                }
+
+                input, select {
+                    @include font-size(14px, 23px, 400, "Montserrat", $black);
+                    padding: 15px;
+                    border: 1px solid $light-blue;
+                    border-radius: 25px;
+                    outline: none;
+                    cursor: pointer;
+                    width: 100%;
+                    box-sizing: border-box;
+                    
+                    &::placeholder {
+                        color: #999;
+                    }
+                }
+
+                select {
+                    color: $blue;
+                    appearance: none;
+                    -webkit-appearance: none;
+                    background: #fff;
+                    background-size: 12px;
+                }
+            }
+
+            .appointment-button {
+                @include adaptive-size(250px, 70px, 155px, 38px);
+                @include font-size(15px, 25px, 600, "Montserrat", $white);
+                z-index: 1;
+                margin-top: 15px;
+                margin-bottom: 12px;
+                background-color: $blue;
+                border: none;
+                border-radius: 25px;
+                cursor: pointer;
+                align-self: center;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: darken($blue, 10%);
+                }
+            }
+        }
+    }
+
+    .appointment-image {
+        position: relative;
+        z-index: 1;
+        .appointment-dog_image {
+            width: 100%;
+            @include adaptive-size(630px, 760px, 230px, 268px);
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 50%; 
+        background: linear-gradient(to right, rgba(224, 237, 239, 0), $pastel-blue);
+        z-index: 0; 
+        @include small {
+            top: auto;
+            bottom: 0;
+            left: 0;
+            width: 100%; 
+            height: 50%; 
+            background: linear-gradient(to bottom, rgba(224, 237, 239, 0), $pastel-blue);
+        }
+    }
+}
